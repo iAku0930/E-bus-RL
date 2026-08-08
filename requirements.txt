@@ -1,0 +1,6 @@
+torch>=2.0
+numpy>=1.23
+matplotlib>=3.5
+openpyxl>=3.0
+tqdm>=4.60
+pypdf>=3.0

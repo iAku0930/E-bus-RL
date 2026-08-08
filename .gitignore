@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# 归档/历史/过程性文件（不上传）
+archive/
+archive/
+
+# 参考论文 PDF（版权，完全屏蔽，不上传）
+docs/papers/
+
+# 备份与压缩包（不上传）
+*.zip
+*.rar
+*.7z
+E-bus_backup_*
+
+# 实验数据缓存（保留最终图与 data.xlsx；按需调整）
+results/*.npy
+
+# 系统/IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
