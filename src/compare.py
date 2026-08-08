@@ -111,9 +111,9 @@ def main():
     x = np.arange(len(metrics)); w = 0.35
     fig, ax = plt.subplots(figsize=(11, 5.5))
     b1 = ax.bar(x - w/2, [means[mk][0] for mk in metrics], w,
-                color=COL['联合'], label='联合', edgecolor='white')
+                color=COL[short[0]], label=short[0], edgecolor='white')
     b2 = ax.bar(x + w/2, [means[mk][1] for mk in metrics], w,
-                color=COL['源方法'], label='源方法', edgecolor='white')
+                color=COL[short[1]], label=short[1], edgecolor='white')
     for bars in (b1, b2):
         for r in bars:
             ax.annotate(f'{r.get_height():.0f}', (r.get_x() + r.get_width()/2, r.get_height()),
