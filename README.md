@@ -58,4 +58,4 @@ cd src && python visualize.py
 
 ## 相关工作说明
 
-本工作的 dual-stage 思想源自本组 E-taxi 论文（IEEE T-ASE 2025）。本工作的贡献在 **E-bus 场景建模、方法适配、对比发现**，与源论文的创新边界详见 [`docs/论文框架.md`](docs/论文框架.md)。
+本工作的 dual-stage 思想源自 E-taxi 论文（IEEE T-ASE 2025）。本工作的贡献在 **E-bus 场景建模、方法适配、对比发现**，与源论文的创新边界详见 [`docs/论文框架.md`](docs/论文框架.md)。
