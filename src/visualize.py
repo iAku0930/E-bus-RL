@@ -1,4 +1,4 @@
-"""全天策略可视化（主方法=源方法）。训练→取第2天数据→4子图清晰展示发车/充电/电价策略。"""
+"""全天策略可视化（dual-stage）。训练 → 取第 2 天数据 → 4 子图：车辆甘特/电量/客流电价/发车充电时机。"""
 import os, sys, time, warnings
 import numpy as np
 import matplotlib
@@ -59,7 +59,7 @@ def run_day(agent):
 
 def main():
     t0 = time.time()
-    print(f'训练源方法(主方法) {EP}ep ...')
+    print(f'训练 dual-stage {EP}ep ...')
     log, agent = train.train_source(1, 1, 1, num_episodes=EP, seed=0, verbose=True)
 
     # ---- 训练 reward 曲线 ----

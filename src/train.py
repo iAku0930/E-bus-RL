@@ -1,6 +1,8 @@
-"""训练循环：联合智能体（发车多头PPO + 充电PPO，耦合）与单智能体（3头）。
-
-耦合：每个时段先在 s0 上发车决策并应用，再在发车后的状态上做充电决策。
+"""训练循环。三种方法：
+- train_joint：双 PPO 联合（发车 actor + 充电 actor，集中式 critic，启发式选车）
+- train_source：dual-stage（单多头 PPO，启发式选车）
+- train_single：单多头 PPO 选具体车（早期 baseline）
+耦合：每段先发车，充电在发车之后的状态上决策。
 """
 import numpy as np
 import torch

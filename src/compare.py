@@ -1,5 +1,4 @@
-"""最终对比实验：联合智能体(集中式双PPO) vs 源方法(单多头PPO+启发式)。
-多 seed，生成清晰的收敛曲线 + 指标对比 + 充电电价分布图。"""
+"""对比实验：双 PPO 联合 vs dual-stage。多 seed，出收敛曲线 / 指标 / 充电电价图。"""
 import os, sys, time, collections, warnings
 import numpy as np
 import matplotlib
