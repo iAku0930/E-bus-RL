@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "如果您的研究使用了本工作，请按如下方式引用。"
+title: "E-bus 调度与充电协同管理的强化学习方法（dual-stage vs 双PPO联合 对比）"
+authors:
+  - alias: iAku0930
+type: software
+license: MIT
+repository-code: "https://github.com/iAku0930/E-bus-RL"
+url: "https://github.com/iAku0930/E-bus-RL"
+keywords:
+  - reinforcement-learning
+  - electric-bus
+  - scheduling
+  - charging
+  - PPO
+  - dual-stage
+  - public-transit
+abstract: >-
+  本项目将 dual-stage 强化学习方法（RL 决策时机/数量 + 启发式选车）应用于
+  电动公交（E-bus）调度 + 充电场景，并与双 PPO 联合智能体方案进行系统对比。
+  在 E-bus 同质车队场景下，dual-stage 在服务量、充电花费、分时电价敏感性上
+  均优于双 PPO 联合。环境含现实建模：固定线路、同质车队、聚合客流（泊松）、
+  分时电价、高峰拥堵、乘客流失、连续多日运营。
