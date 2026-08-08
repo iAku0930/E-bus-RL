@@ -25,7 +25,7 @@ EP = 400
 SEEDS = [0, 1]
 RES = os.path.join(os.path.dirname(__file__), 'results')
 os.makedirs(RES, exist_ok=True)
-COL = {'联合': '#2c7fb8', '源方法': '#41ab5d'}     # 蓝/绿
+COL = {'双PPO联合': '#2c7fb8', 'dual-stage': '#41ab5d'}     # 蓝/绿
 SOC_VAL_UNIT = 120.0
 
 
@@ -75,8 +75,8 @@ def eval_policy(method, agent, n=5):
 
 def main():
     t0 = time.time()
-    methods = [('联合(集中式双PPO)', 'joint', train.train_joint),
-               ('源方法(单多头+启发式)', 'source', train.train_source)]
+    methods = [('双PPO联合(集中式)', 'joint', train.train_joint),
+               ('dual-stage(单多头+启发式)', 'source', train.train_source)]
     curves, finals = {m[0]: [] for m in methods}, {m[0]: [] for m in methods}
     for name, tag, fn in methods:
         for sd in SEEDS:
@@ -89,7 +89,7 @@ def main():
                   f'SP={m["SP"]:.0f} CE={m["CE"]:.0f} 总收益={m["profit"]:.0f}  ({time.time()-ts:.0f}s)')
 
     names = [m[0] for m in methods]
-    short = ['联合', '源方法']
+    short = ['双PPO联合', 'dual-stage']
 
     # ========= 图1：训练收敛曲线 =========
     fig, ax = plt.subplots(figsize=(10, 5.5))
